@@ -15,34 +15,21 @@
 </head>
 <body>
     <header id="header">
-        <nav class="navbar-color fixed-top">
-            <div class="center">
-                <a href="index.html">
-                    <img src="images/structure-logo_header.png" alt="logo-site" class="logo">
-                    <span>Fourth Cover</span>
-                </a>
-                <a class="shuffle" href="shuffle.html"><img src="images/structure-shuffle-button.png"></a>
-            </div>
-        </nav>
-        <div class="nav-cont fixed-top">
-            <div class="search fixed-top">
-                    <form class="input-group form-inline my-2 my-lg-0" action="search.html" method="get">
-                        <input type="search" class="form-control" id="search" name="search" aria-label="book-name" placeholder="Qual título você está procurando?">
-                        <button type="submit" class="btn btn-purple">search  <img src="images/structure-search.png"></button>
-                    </form>
-            </div>
-            <div class="titles fixed-top">
-                <div class="row">
-                    <div class="col-4 col-md-2"><a href="pages/genre-romance.html">Romance</a></div>
-                    <div class="col-4 col-md-2"><a href="pages/genre-ficção.html">Ficção</a></div>
-                    <div class="col-4 col-md-2"><a href="pages/genre-lgbtqia+.html">LGBTQIA+</a></div>
-                    <div class="col-4 col-md-2"><a href="pages/genre-suspense.html">Suspense</a></div>
-                    <div class="col-4 col-md-2"><a href="pages/genre-drama.html">Drama</a></div>
-                    <div class="col-4 col-md-2"><a href="pages/genre-guerra.html">Guerra</a></div>
-                </div>
-            </div>
+    <nav class="navbar-color center fixed-top">
+            <a href="index.php">
+                <img src="images/structure-logo_header.png" alt="logo-site" class="logo">
+                <span>Fourth Cover</span>
+            </a>
+        <div class="nav-links titles">
+            <a href="views/pages/genre-romance.php">Romance</a>
+            <a href="views/pages/genre-ficção.php">Ficção</a>
+            <a href="views/pages/genre-lgbtqia+.php">LGBTQIA+</a>
+            <a href="views/pages/genre-suspense.php">Suspense</a>
+            <a href="views/pages/genre-drama.php">Drama</a>
+            <a href="views/pages/genre-guerra.php">Guerra</a>
         </div>
-    </header>
+    </nav>
+</header>
     <hr class="division">
     <section>
         <div id="carousel" class="container">
@@ -57,7 +44,7 @@
                     <div class="carousel-item">
                         <img class="img" src="images/Home/carrossel-ppt2.png" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <a href="shuffle.html"><button type="button" class="btn btn-purple btn-sm">Shuffle</button></a>
+                            <a href="shuffle.php"><button type="button" class="btn btn-purple btn-sm">Shuffle</button></a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -310,7 +297,7 @@
                     <span id="carousel1-genre" href="#"></span>. 
                 </p>
                 <p id="carousel1-sino"></p>
-                <form action="book.html" method="get">
+                <form action="views/book.php" method="get">
                     <button id="carousel1-link" value="" id="input" name="input" type="submit" class="btn btn-purple">Saber mais +</button>
                 </form>
             </div>
@@ -547,7 +534,7 @@
                     <span id="carousel2-genre" href="#"></span>. 
                 </p>
                 <p id="carousel2-sino"></p>
-                <form action="book.html" method="get">
+                <form action="views/book.php" method="get">
                     <button id="carousel2-link" value="" id="input" name="input" type="submit" class="btn btn-purple">Saber mais +</button>
                 </form>
             </div>
@@ -785,7 +772,7 @@
                 </p>
                 <p id="carousel3-sino"></p>
                 <p class="redes-imagens"><strong>Redes Sociais referentes:</strong><a target="_blank" href="#" id="carousel3-tiktok"><img src="images/Home/tiktok-adptation.png"></a><a target="_blank" href="#" id="carousel3-instagram"><img src="images/Home/insta-adptation.png"></a><a target="_blank" href="#" id="carousel3-twitter"><img src="images/Home/twitter-adptation.png"></a></p>
-                <form action="book.html" method="get">
+                <form action="views/book.php" method="get">
                     <button id="carousel3-link" value="AA" id="input" name="input" type="submit" class="btn btn-purple">Saber mais +</button>
                 </form>
             </div>
@@ -1019,7 +1006,7 @@
                         <span id="carousel4-genre" href="#"></span>. 
                     </p>
                     <p id="carousel4-sino"></p>
-                    <form action="book.html" method="get">
+                    <form action="views/book.php" method="get">
                         <button id="carousel4-link" style="width: 100%;" value="" id="input" name="input" type="submit" class="btn btn-purple">Saber mais +</button>
                     </form>
                 </div>
@@ -1053,7 +1040,7 @@
                                         <div  class="col-6 col-md-3 float-left">
                                             <div id="book-1" class="element img1">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="CO1" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-CO1.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1062,7 +1049,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div id="book-2" class="element img2">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="CO2" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-CO2.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1071,7 +1058,7 @@
                                         <div  class="col-6 col-md-3 float-left ">
                                             <div id="book-3" class="element img3">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="CO3" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-CO3.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1083,7 +1070,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div class="element img4">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="EP" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-EP.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1092,7 +1079,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div class="element img5">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="FG" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-FG.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1101,7 +1088,7 @@
                                         <div  class="col-6 col-md-3 float-left">
                                             <div class="element img6">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="A" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-A.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1118,7 +1105,7 @@
                             </div>
                         </div>
                         <div class="text-author col-12 col-xs-10 col-sm-4">
-                            <img class="author"src="images/Home/home-autor-rainbow.jpg">
+                            <img class="author" alt="foto da autora Rainbow Rowell" src="images/Home/home-autor-rainbow.jpg">
                             <figcaption>Rainbow Rowell</figcaption>
                         </div>
                     </div>
@@ -1132,7 +1119,7 @@
                                         <div  class="col-6 col-md-3 float-left">
                                             <div id="book-1" class="element img1">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="CO1" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-CO1.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1141,7 +1128,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div id="book-2" class="element img2">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="CO2" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-CO2.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1152,7 +1139,7 @@
                                         <div  class="col-6 col-md-3 float-left ">
                                             <div id="book-3" class="element img3">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="CO3" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-CO3.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1161,7 +1148,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div class="element img4">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="EP" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-EP.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1172,7 +1159,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div class="element img5">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="FG" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-FG.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1181,7 +1168,7 @@
                                         <div  class="col-6 col-md-3 float-left">
                                             <div class="element img6">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="A" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-A.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1198,7 +1185,7 @@
                             </div>
                         </div>
                         <div class="text-author col-12 col-xs-10 col-sm-4">
-                            <img class="author"src="images/Home/home-autor-rainbow.jpg">
+                            <img class="author"src="images/Home/home-autor-rainbow.jpg"alt="foto da autora Rainbow Rowell">
                             <figcaption>Rainbow Rowell</figcaption>
                         </div>
                     </div>
@@ -1219,7 +1206,7 @@
                                         <div  class="col-6 col-md-3 float-left">
                                             <div id="book-1" class="element img1">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="V" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-acclaimed-verity.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1228,7 +1215,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div id="book-2" class="element img2">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="EAQA" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-popullar-acaba.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1237,7 +1224,7 @@
                                         <div  class="col-6 col-md-3 float-left ">
                                             <div id="book-3" class="element img3">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="TASI" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-popullar-imperfeicoes.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1249,7 +1236,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div class="element img4">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="9N" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-9.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1258,7 +1245,7 @@
                                         <div class="col-6 col-md-3 float-left">
                                             <div class="element img5">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="AOVT" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-verao.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1267,7 +1254,7 @@
                                         <div  class="col-6 col-md-3 float-left">
                                             <div class="element img6">
                                                 <a href="#">
-                                                    <form action="book.html" method="get">
+                                                    <form action="views/book.php" method="get">
                                                         <button value="AMPDMC" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-mil.jpg"></button>
                                                     </form>
                                                 </a>
@@ -1284,7 +1271,7 @@
                             </div>
                         </div>
                         <div class="text-author col-12 col-xs-10 col-sm-4">
-                            <img class="author"src="images/Home/home-autor-colleen.jpg">
+                            <img class="author"src="images/Home/home-autor-colleen.jpg"alt="foto da autora Colleen Hoover">
                             <figcaption>Colleen Hoover</figcaption>
                         </div>
                     </div>
@@ -1298,7 +1285,7 @@
                                     <div  class="col-6 col-md-3 float-left">
                                         <div id="book-1" class="element img1">
                                             <a href="#">
-                                                <form action="book.html" method="get">
+                                                <form action="views/book.php" method="get">
                                                     <button value="V" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-acclaimed-verity.jpg"></button>
                                                 </form>
                                             </a>
@@ -1307,7 +1294,7 @@
                                     <div class="col-6 col-md-3 float-left">
                                         <div id="book-2" class="element img2">
                                             <a href="#">
-                                                <form action="book.html" method="get">
+                                                <form action="views/book.php" method="get">
                                                     <button value="EAQA" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-popullar-acaba.jpg"></button>
                                                 </form>
                                             </a>
@@ -1318,7 +1305,7 @@
                                     <div  class="col-6 col-md-3 float-left ">
                                         <div id="book-3" class="element img3">
                                             <a href="#">
-                                                <form action="book.html" method="get">
+                                                <form action="views/book.php" method="get">
                                                     <button value="TASI" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-popullar-imperfeicoes.jpg"></button>
                                                 </form>
                                             </a>
@@ -1327,7 +1314,7 @@
                                     <div class="col-6 col-md-3 float-left">
                                         <div class="element img4">
                                             <a href="#">
-                                                <form action="book.html" method="get">
+                                                <form action="views/book.php" method="get">
                                                     <button value="9N" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-9.jpg"></button>
                                                 </form>
                                             </a>
@@ -1338,7 +1325,7 @@
                                     <div class="col-6 col-md-3 float-left">
                                         <div class="element img5">
                                             <a href="#">
-                                                <form action="book.html" method="get">
+                                                <form action="views/book.php" method="get">
                                                     <button value="AOVT" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-verao.jpg"></button>
                                                 </form>
                                             </a>
@@ -1347,7 +1334,7 @@
                                     <div  class="col-6 col-md-3 float-left">
                                         <div class="element img6">
                                             <a href="#">
-                                                <form action="book.html" method="get">
+                                                <form action="views/book.php" method="get">
                                                     <button value="AMPDMC" id="input" name="input" type="submit" class="btn"><img style="width:100%" class="img-thumbnail img-fluid mx-auto" alt="img01" src="images/Home/home-autor-mil.jpg"></button>
                                                 </form>
                                             </a>
@@ -1363,7 +1350,7 @@
                             </div>
                         </div></div>
                         <div class="text-author col-12 col-xs-10 col-sm-4">
-                            <img class="author"src="images/Home/home-autor-colleen.jpg">
+                            <img class="author"src="images/Home/home-autor-colleen.jpg"alt="foto da autora Colleen Hoover">
                             <figcaption>Colleen Hoover</figcaption>
                         </div>
                     </div>
@@ -1379,22 +1366,22 @@
             
             <div class="row">
                 <div class="col-6 col-md-3">
-                    <form action="book.html" method="get">
+                    <form action="views/book.php" method="get">
                         <button value="HT1" id="input" name="input" type="submit" class="btn-saga-ht btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-H1.jpg"></button>
                     </form>
                 </div>
                 <div class="col-6 col-md-3">
-                    <form action="book.html" method="get">
+                    <form action="views/book.php" method="get">
                         <button value="HT2" id="input" name="input" type="submit" class="btn-saga-ht btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-H2.jpg"></button>
                     </form>
                 </div>
                 <div class="col-6 col-md-3">
-                    <form action="book.html" method="get">
+                    <form action="views/book.php" method="get">
                         <button value="HT3" id="input" name="input" type="submit" class="btn-saga-ht btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-H3.jpg"></button>
                     </form>
                 </div>
                 <div class="col-6 col-md-3">
-                    <form action="book.html" method="get">
+                    <form action="views/book.php" method="get">
                         <button value="HT4" id="input" name="input" type="submit" class="btn-saga-ht btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-H4.jpg"></button>
                     </form>
                 </div>
@@ -1405,44 +1392,44 @@
                 
                 <div class="row">
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP1" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP1.jpg"></button>
                         </form>
                     </div>
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP2" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP2.jpg"></button>
                         </form>
                     </div>
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP3" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP3.jpg"></button>
                         </form>
                     </div>
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP4" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP4.jpg"></button>
                         </form>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP5" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP5.jpg"></button>
                         </form>
                     </div>
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP6" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP6.jpg"></button>
                         </form>
                     </div>
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP7" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP7.jpg"></button>
                         </form>
                     </div>
                     <div class="col-6 col-md-3">
-                        <form action="book.html" method="get">
+                        <form action="views/book.php" method="get">
                             <button value="HP8" id="input" name="input" type="submit" class="btn-saga-hp btn" href="#"><img class="img-fluid mx-auto" src="images/Home/home-saga-HP8.jpg"></button>
                         </form>
                     </div>
@@ -1463,7 +1450,7 @@
                 <ul>
                     <li>fourth.cover@gmail.com</li>
                 </ul>
-                <a class="form" href="forms.html">Formulário</a>
+                <a class="form" href="forms.php">Formulário</a>
             </div>
             <div class="business-partner col-10 col-md-6">
                 <h4>Parceiros</h4>

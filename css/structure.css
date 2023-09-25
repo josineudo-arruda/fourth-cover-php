@@ -13,11 +13,13 @@ header {
 
 
 header nav.navbar-color {
-    background-color: #175563;
-    padding-bottom: 10px;
-    position: fixed;
+  background-color: #175563;
+  padding-bottom: 10px;
+  position: fixed;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-header div.center img.logo {
+header .center img.logo {
     width: 55px;
 }
 header .shuffle img {
@@ -25,14 +27,11 @@ header .shuffle img {
 }
 header div.center{
     padding-top: 10px;
-    text-align: center;
     display: block;
 }
-header .shuffle{
+header .nav-links{
     display: inline;
     float: right;
-    margin: 5px;
-    margin-top: -2px;
 }
 header div.center span {
     font: 24px bold;
@@ -43,6 +42,13 @@ header div.center span {
 header .search button.btn-purple:hover{
     background-color: #b582e4;
 }
+
+.nav-links a, .center span {
+  display: inline;
+  margin-right: 20px; 
+  text-decoration: none; 
+}
+
 
 /* search area */
 
@@ -55,6 +61,7 @@ div.search {
 div.search .input-group{
     width: 100%;
 }
+
 
 .nav-cont {
     margin-top: 50px;
@@ -87,38 +94,35 @@ div.search img {
     }
 }
 
-div.titles {
-    margin-top: 140px;
-    margin-left: 200px;
-    margin-right: 5%;
-    font-size: 13px;
-}
-
-div.titles a:hover{
-    color:#c4ace4;
-    text-decoration: underline;
-}
-
-hr.division {
-    margin-top: 15px;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 15px;
-}
-
 div.titles a {
     text-decoration: none;
-    color: black;
+    color: white; 
+    background-color: #163d45; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 13px;
+    margin-right: 10px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
+div.titles a:hover {
+    background-color: #c4ace4;
+    color: white; 
+}
+
+div.titles a:last-child {
+    margin-right: 0; 
+}
 header {
-    margin-bottom: 180px;
+    margin-bottom: 90px;
     z-index: 1;
 }
 
 hr.partition {
     margin-left: 50%;
-    margin-top: 120px;
+    margin-top: 0px;
     margin-right: 50%;
     border-color: #c6a9e1;
 }
@@ -184,26 +188,21 @@ img.logo-comp {
 
 @media (max-width: 768px){
     div.titles {
-        margin-top: 70px;
         margin-left: 5%;
     }
     div.titles div.row div {
-        margin-top: 40px;
+        margin-top: 80px;
     }
     div.titles div.row {
         top: 40px;
-        margin-top: 0px;
+        margin-top: 20px;
         position: absolute;
     }
     div.titles {
         margin-left: 70px;
     }
-    .nav-cont {
-        margin-top: 50px;
-        padding: 110px;
-    }
     header {
-        margin-bottom: 270px;
+        margin-bottom: 100px;
     }
     .logo-footer {
         width: 20%;
