@@ -47,12 +47,9 @@ function criarTabelas($conexao) {
 
 $caminho_banco_dados = '../models/sqlite/banco_de_dados.sqlite';
 
-if (!file_exists($caminho_banco_dados)) {
-    $conexao = new SQLite3($caminho_banco_dados);
-    criarTabelas($conexao);
-} else {
-    $conexao = new SQLite3($caminho_banco_dados);
-}
+$conexao = new SQLite3($caminho_banco_dados);
+criarTabelas($conexao);
+
 
 
 session_start();

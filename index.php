@@ -1487,7 +1487,7 @@ if(!isset($_SESSION['usuario_logado'])) {
                 <ul>
                     <li>fourth.cover@gmail.com</li>
                 </ul>
-                <a class="form" href="forms.php">Formulário</a>
+                <a class="form" href="views/forms.php">Formulário</a>
             </div>
             <div class="business-partner col-10 col-md-6">
                 <h4>Parceiros</h4>
