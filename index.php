@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+// Verificar se o usuário está logado
+if(!isset($_SESSION['usuario_logado'])) {
+    header("Location: views/login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +15,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/images/structure-logo_header.png">
-    <title>Fourth Cover</title>
+    <title>Fourth Cover</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="css/structure.css">
     <link type="text/css" rel="stylesheet" href="css/home.css">
     <script language="javascript" src="js/home.js"></script>
     <script language="javascript" src="js/books.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
 </head>
 <body>
     <header id="header">
@@ -20,6 +30,33 @@
                 <img src="images/structure-logo_header.png" alt="logo-site" class="logo">
                 <span>Fourth Cover</span>
             </a>
+        <div class="dropdown drop-nav pl-3 nav-links titles">
+            <a class="btn dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php        
+                  
+                  if (isset($_SESSION['usuario_logado'])) {
+                      $conexao = new PDO("sqlite:models/sqlite/banco_de_dados.sqlite");
+                      $query = "SELECT username FROM User WHERE id = :id";
+                  
+                      $stmt = $conexao->prepare($query);
+                      $stmt->bindParam(":id", $_SESSION['usuario_logado']);
+                      $stmt->execute();
+                  
+                      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+                  
+                      if ($resultado) {
+                          $nomeCompleto = $resultado['username'];
+                  
+                          echo $nomeCompleto;
+                      } 
+                  } 
+                ?>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+                <a class="dropdown-item drop" href="views/profile.php">Perfil</a>
+                <a class="dropdown-item drop" href="views/logout.php">Logout</a>
+            </div>
+        </div>
         <div class="nav-links titles">
             <a href="views/pages/genre-romance.php">Romance</a>
             <a href="views/pages/genre-ficção.php">Ficção</a>
@@ -44,7 +81,7 @@
                     <div class="carousel-item">
                         <img class="img" src="images/Home/carrossel-ppt2.png" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <a href="shuffle.php"><button type="button" class="btn btn-purple btn-sm">Shuffle</button></a>
+                            
                         </div>
                     </div>
                     <div class="carousel-item">

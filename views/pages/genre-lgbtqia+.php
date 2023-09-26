@@ -18,6 +18,34 @@
                 <img src="../../images/structure-logo_header.png" alt="logo-site" class="logo">
                 <span>Fourth Cover</span>
             </a>
+        <div class="dropdown drop-nav pl-3 nav-links titles">
+            <a class="btn dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <?php
+                  
+                  
+                  if (isset($_SESSION['usuario_logado'])) {
+                      $conexao = new PDO("sqlite:../../models/sqlite/banco_de_dados.sqlite");
+                      $query = "SELECT username FROM User WHERE id = :id";
+                  
+                      $stmt = $conexao->prepare($query);
+                      $stmt->bindParam(":id", $_SESSION['usuario_logado']);
+                      $stmt->execute();
+                  
+                      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+                  
+                      if ($resultado) {
+                          $nomeCompleto = $resultado['username'];
+                  
+                          echo $nomeCompleto;
+                      } 
+                  } 
+                ?>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="userDropdown">
+                <a class="dropdown-item drop" href="../profile.php">Perfil</a>
+                <a class="dropdown-item drop" href="../logout.php">Logout</a>
+            </div>
+        </div>
         <div class="nav-links titles">
             <a href="genre-romance.php">Romance</a>
             <a href="genre-ficção.php">Ficção</a>

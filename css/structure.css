@@ -43,7 +43,7 @@ header .search button.btn-purple:hover{
     background-color: #b582e4;
 }
 
-.nav-links a, .center span {
+.nav-links a:not(.dropdown-item), .center span {
   display: inline;
   margin-right: 20px; 
   text-decoration: none; 
@@ -94,7 +94,7 @@ div.search img {
     }
 }
 
-div.titles a {
+div.titles a:not(.drop) {
     text-decoration: none;
     color: white; 
     background-color: #163d45; 
@@ -179,6 +179,25 @@ img.logo-comp {
 
 .business-partner img.amazon-logo {
     margin-left: 25px;
+}
+
+body.login {
+  background-color: #163d45;
+}
+
+.drop-nav {
+  margin-top: -5px;
+  color: white;
+  padding-bottom: -5px;
+}
+
+.card-cont, .card-cont-sign {
+  margin-top: 180px;
+  width: 500px;
+}
+
+.card-cont-sign {
+  margin-top: 160px;
 }
 
 .form {
